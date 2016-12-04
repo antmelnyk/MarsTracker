@@ -9,4 +9,12 @@ describe "Перегляд статичних сторінок" do
     end
   end
 
+  describe "Перехід на реєстрацію" do
+	it "повинен переходити по посиланню" do
+		visit root_path
+		click_link('register')
+		page.has_content?('Логін')
+	end
+end
+  
 end
