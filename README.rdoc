@@ -1,28 +1,15 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Перевірити роботу проекту можна прямо зараз в онлайні, тому що він деплоїться на Heroku: https://marstracker.herokuapp.com/
 
-Things you may want to cover:
+Якщо бажаєте запустити його у себе локально (якщо ви користувач Віндовс), маєте виконати наступні кроки:
+ 1. Встановити Рубі та Рельси: https://s3.amazonaws.com/railsinstaller/Windows/railsinstaller-3.2.0.exe
+ 2. У вас має бути встановлений node.js
+ 3. В директорії проекту виконати консоль-команду rails-server
+ 4. Проект буде доступний локально за адресом localhost:3000
 
-* Ruby version
+Інструкція для Лінукс буде тут пізніше.
 
-* System dependencies
+Якщо виникнуть якісь проблеми, пишіть у Slack чаті командиру бригади *pixelgoo*.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+**ЗАУВАЖЕННЯ**: проект зараз у стадії "аби здати лабу" і буде розвиватися протягом грудня для здачі РГР. Особливо ми будемо змотивовані поставленою другою атестацією (PLEASE)!
