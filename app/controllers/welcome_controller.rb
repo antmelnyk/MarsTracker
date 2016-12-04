@@ -1,6 +1,14 @@
 class WelcomeController < ApplicationController
 
   def index
+    self.version_link
+  end
+
+  def registration
+    self.version_link
+  end
+
+  def version_link
     deployed = true
     if deployed
       @version = File.read("version.txt")
