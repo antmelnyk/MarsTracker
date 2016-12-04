@@ -1,6 +1,5 @@
-require 'git'
 class WelcomeController < ApplicationController
   def index
-    @version = AppVersion.current_version
+    @version = AppConfig.git_version
   end
 end
