@@ -1,10 +1,9 @@
 source 'https://rubygems.org'
 
+ruby "2.2.4"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass', '~> 3.2.0'
@@ -16,6 +15,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+# ruby-git
 gem 'git', '~> 1.3.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -40,9 +40,15 @@ group :development, :test do
   gem 'byebug'
 end
 
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
+  gem 'sqlite3', '1.3.12'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
