@@ -1,0 +1,15 @@
+<div class="jumbotron">
+  <div class="row">
+    <div class="col-xs-3">
+      <p>
+        <%= @article.title %>
+      </p>
+    </div>
+    <div class="col-xs-9">
+      <p>
+        <%= @article.text %>
+      </p>
+    </div>
+    <%= link_to 'Назад', articles_path %>
+  </div>
+</div>

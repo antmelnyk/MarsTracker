@@ -1,3 +1,48 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.sass.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.bg {
+  background-image: url(image_path('mars-background.PNG'));
+  position: fixed;
+  width: 100%;
+  height: 620px; /*same height as in script */
+  top: 20px;
+  left: 0;
+  z-index: -1;
+}
+
+#main-page-jumbotron {
+  margin-bottom: 0;
+  height: 450px;
+  color: white;
+  text-shadow: black 0.3em 0.3em 0.3em;
+  background: transparent;
+}
+
+#logo {
+  width: 300px;
+  height: 300px;
+  margin: 40px 15px 15px 15px;
+}
+
+.navbar-brand.mars-logo {
+  margin: 0;
+  padding: 3px;
+}
+
+#logo-small {
+  width: 45px;
+  height: 45px;
+  margin: 0;
+  padding: 0;
+}
+
+#mars-one-logo {
+  width: 203px;
+  height: 61px;
+}
+
+.navbar navbar-inverse navbar-fixed-top {
+  color: black;
+}

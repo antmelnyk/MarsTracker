@@ -1,3 +1,69 @@
-<h1>Добро пожаловать на MarsTracker!</h1>
-<p>Будущее человечества за колонизацией и экспансией, а первые проекты по колонизации Марса уже в разработке. Стань частью комьюнити и не пропусти самое интересное!</p>
-<%= link_to 'registration', { controller: :welcome, action: :registration }, class: 'someClass', id: 'register'  %>
+<script>
+    function parallax(){
+        var scrolled = $(window).scrollTop();
+        $('.bg').css('height', (620-scrolled) + 'px');
+    }
+
+    $(window).scroll(function(e){
+        parallax();
+    });
+</script>
+
+<div class="bg"></div>
+<div class="jumbotron" id="main-page-jumbotron">
+  <div class="row">
+    <div class="col-xs-4">
+      <%= image_tag("logo.png", :id => "logo") %>
+    </div>
+    <div class="col-xs-8" style="padding-top: 40px;">
+      <h1>Добро пожаловать на MarsTracker!</h1>
+      <p>Будущее человечества за колонизацией и экспансией, а первые проекты по колонизации Марса уже в разработке. Стань частью комьюнити и не пропусти самое интересное!</p>
+    </div>
+  </div>
+</div>
+
+<div class="jumbotron text-center" id="mailer">
+  <p>Важные новости и события, а также интересные статьи по теме доступны в ежемесячной рассылке:</p>
+  <form class="form-inline">
+    <div class="input-group">
+      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-danger">Подписаться</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="jumbotron">
+  <div class="row">
+    <div class="col-xs-8">
+      <h2>MarsOne</h2>
+      <p>Частный проект, руководимый Басом Лансдорпом и предполагающий полет на Марс с последующим основанием колонии на его поверхности и трансляцией всего происходящего по телевидению. По заявлению самой организации она не является аэрокосмической компанией и все работы по разработке, производству и запуску космических аппаратов будут переданы субподрядчикам. Штат компании составляет 8 человек.</p>
+     <button class="btn btn-default btn-lg">Ход проекта на MarsTracker</button>
+   </div>
+   <div class="col-xs-4">
+     <%= image_tag("mars-one-logo.png", :id => "mars-one-logo") %>
+   </div>
+  </div>
+</div>
+
+<div class="jumbotron">
+  <div class="row">
+    <div class="col-xs-4">
+      <%= image_tag("spacex-logo.png", :id => "spacex-logo") %>
+    </div>
+    <div class="col-xs-8">
+      <h2>SpaceX ITS</h2>
+      <p>Межпланетная транспортная система (англ. Interplanetary Transport System, ITS) — проект аэрокосмической компании SpaceX, предполагающий создание многоразового космического транспорта для доставки людей на Марс с целью создания там в будущем самоподдерживающейся колонии. Подробности проекта представлены основателем компании SpaceX Илоном Маском 27 сентября 2016 года на Международном конгрессе по астронавтике в Гвадалахаре, Мексика.</p>
+      <button class="btn btn-default btn-lg">Ход проекта на MarsTracker</button>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-10">
+  </div>
+  <div class="col-xs-2">
+    <h6>Версия проекта: <%= @version %></h6>
+  </div>
+</div>

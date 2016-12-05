@@ -1,0 +1,18 @@
+<div class="container">
+  <h2>Статьи</h2>
+  <p>Информация о колонизации, футуризме и ракетостроении которая может вас заинтересовать</p>
+  <%= link_to 'Добавить статью', new_article_path %>
+  <table class="table table-striped">
+    <tbody>
+    <% @articles.each do |article| %>
+        <thead>
+        <tr>
+          <th><%= article.title %></th>
+          <th><%= article.text %></th>
+          <th><%= link_to 'Читать', article_path(article) %></th>
+        </tr>
+        </thead>
+  <% end %>
+    </tbody>
+  </table>
+</div>

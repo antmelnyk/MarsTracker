@@ -9,17 +9,30 @@
 <body>
 
 <div id="main-container" class="container">
-  <div class="row">
-    <div class="col-xs-3">
-      <h3>MarsTracker</h3>
+  <nav class="navbar navbar-inverse navbar-fixed-top" id="top-navbar">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-left">
+          <a class="navbar-brand mars-logo" href="#">
+            <%= image_tag("logo.png", :id => "logo-small") %>
+          </a>
+          <li class="<%= 'active' if params[:controller] == 'welcome' %>"><%= link_to 'MARS Tracker', root_path %></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="<%= 'active' if params[:controller] == 'articles' %>"><%= link_to 'Cтатьи', { controller: :articles } %></li>
+          <li class="<%= 'active' if params[:controller] == 'articles' %>"><%= link_to 'Регистрация', { controller: :welcome, action: :registration } %></li>
+        </ul>
+      </div>
     </div>
-    <div class="col-xs-9">
-      <%= yield %>
-    </div>
-  </div>
-  <div class="row">
-    <h3>Версія проекту: <%= @version %></h3>
-  </div>
+  </nav>
+  <%= yield %>
 </div>
 
 
