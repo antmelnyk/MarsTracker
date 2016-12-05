@@ -5,7 +5,7 @@ class WelcomeController < ApplicationController
   end
 
   def version_display
-    deployed = false
+    deployed = true
     if deployed
       @version = File.read("version.txt")
     else
