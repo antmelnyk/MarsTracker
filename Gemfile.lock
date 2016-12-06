@@ -195,7 +195,6 @@ DEPENDENCIES
   git (~> 1.3.0)
   jbuilder (~> 2.0)
   jquery-rails
-  nokogiri
   pg
   rails (= 4.2.5.1)
   rails_12factor
