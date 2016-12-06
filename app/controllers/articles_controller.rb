@@ -18,10 +18,6 @@ class ArticlesController < ApplicationController
     redirect_to @article
   end
 
-  def delete_all
-    Article.delete_all
-  end
-
   def article_params
     params.require(:article).permit(:title, :text)
   end
