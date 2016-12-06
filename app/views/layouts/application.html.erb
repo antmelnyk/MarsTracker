@@ -23,11 +23,11 @@
           <a class="navbar-brand mars-logo" href="#">
             <%= image_tag("logo.png", :id => "logo-small") %>
           </a>
-          <li class="<%= 'active' if params[:controller] == 'welcome' %>"><%= link_to 'MARS Tracker', root_path %></li>
+          <li class="<%= 'active' if params[:controller] == 'welcome' %>"><%= link_to 'MARS Tracker', root_path, id: "mainpage-link" %></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li class="<%= 'active' if params[:controller] == 'articles' %>"><%= link_to 'Cтатьи', { controller: :articles } %></li>
-          <li class="<%= 'active' if params[:controller] == 'articles' %>"><%= link_to 'Регистрация', { controller: :welcome, action: :registration } %></li>
+          <li class="<%= 'active' if params[:controller] == 'articles' %>"><%= link_to 'Cтатьи', { controller: :articles }, id: "articles-link" %></li>
+          <li class="<%= 'active' if params[:controller] == 'articles' %>"><%= link_to 'Регистрация', { controller: :welcome, action: :registration }, id: "registration-link" %></li>
         </ul>
       </div>
     </div>

@@ -8,7 +8,7 @@
         <thead>
         <tr>
           <th><%= article.title %></th>
-          <th><%= article.text %></th>
+          <th><%= Nokogiri::HTML(article.text).text %></th>
           <th><%= link_to 'Читать', article_path(article) %></th>
         </tr>
         </thead>
