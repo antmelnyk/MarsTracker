@@ -1,4 +1,11 @@
 rvm:
 - 2.2.4
 
+services:
+  - postgresql
+
+before_script:
+  - cp config/database.yml.travis config/database.yml
+
 script: "bundle exec rspec"
+
