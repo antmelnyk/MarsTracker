@@ -22,6 +22,6 @@ class ArticlesController < ApplicationController
     params.require(:article).permit(:title, :text)
   end
 
-  private :article_params, :delete_all
+  private :article_params
 
 end
