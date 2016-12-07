@@ -12,12 +12,15 @@
 <div class="bg"></div>
 <div class="jumbotron" id="main-page-jumbotron">
   <div class="row">
-    <div class="col-xs-4">
-      <%= image_tag("logo.png", :id => "logo") %>
-    </div>
-    <div class="col-xs-8" style="padding-top: 40px;">
-      <h1>Добро пожаловать на MarsTracker!</h1>
-      <p>Будущее человечества за колонизацией и экспансией, а первые проекты по колонизации Марса уже в разработке. Стань частью комьюнити и не пропусти самое интересное!</p>
+    <div class="container">
+      <div class="col-md-4" style="padding-left: 0px;  padding-right: 0px;">
+        <%= image_tag("logo.png", :id => "logo", :class => '.img-responsive') %>
+      </div>
+      <div class="col-md-8" style="padding-left: 0px;  padding-right: 0px;">
+        <h1>Добро пожаловать на MARS Tracker!</h1>
+        <p>Будущее человечества за колонизацией и экспансией, а первые проекты по колонизации Марса уже в разработке. Стань частью комьюнити и не пропусти самое интересное!</p>
+        <%= link_to('MARS Tracker', { controller: :pages, action: :show, :page => 'tracker' }, :class => 'btn btn-danger tracker-link') %>
+      </div>
     </div>
   </div>
 </div>

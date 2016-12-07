@@ -20,9 +20,9 @@
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav navbar-left">
-          <a class="navbar-brand mars-logo" href="#">
+          <div class="navbar-brand mars-logo">
             <%= image_tag("logo.png", :id => "logo-small") %>
-          </a>
+          </div>
           <li class="<%= 'active' if params[:controller] == 'welcome' %>"><%= link_to 'MARS Tracker', root_path, id: "mainpage-link" %></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">

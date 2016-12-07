@@ -2,6 +2,13 @@
 // They will automatically be included in application.css.sass.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .bg {
   background-image: url(image_path('mars-background.PNG'));
   position: fixed;
@@ -20,10 +27,15 @@
   background: transparent;
 }
 
+.tracker-link {
+  width: 100%;
+  text-shadow: none;
+}
+
 #logo {
+  margin: 40px 15px 15px 15px;
   width: 300px;
   height: 300px;
-  margin: 40px 15px 15px 15px;
 }
 
 .navbar-brand.mars-logo {
@@ -41,8 +53,4 @@
 #mars-one-logo {
   width: 203px;
   height: 61px;
-}
-
-.navbar navbar-inverse navbar-fixed-top {
-  color: black;
 }
