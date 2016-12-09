@@ -12,9 +12,71 @@
  *
  *= require_tree .
  *= require_self
- *= require welcome
- *= require tracker
  */
 
 @import "bootstrap-sprockets"
 @import "bootstrap"
+
+$bgDefault      : #090a0e
+$bgHighlight    : #1e222f
+$colDefault     : #ffffff
+$colHighlight   : #ffffff
+
+.navbar-default
+  background-color: $bgDefault
+  border-color: $bgHighlight
+  .navbar-brand
+    color: $colDefault
+    margin-right: 10px
+    padding: 3px
+    &:hover, &:focus
+      color: $colHighlight
+  .navbar-text
+    color: $colDefault
+  .navbar-nav
+    > li
+      > a
+        color: $colDefault
+        font-size: 16px
+        font-weight: bold
+        &:hover, &:focus
+          color: $colHighlight
+    > .active
+      > a, > a:hover, > a:focus
+        color: $colHighlight
+        background-color: $bgHighlight
+
+.tracker
+  width: 100%
+  font-size: 22px
+  background-color: #090a0e
+  border-color: #090a0e
+  transition: 0.7s
+  &:hover
+    background-color: #1e222f
+    border-color: #090a0e
+    transition: 0.7s
+
+.progress-bar
+  background-color: orangered
+
+
+body
+  background: url(image_path('mars-background.PNG')) no-repeat center center fixed
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: 100% auto
+
+#main-container
+  margin-top: 55px
+
+.navbar-brand.mars-logo
+  margin: 0
+  padding: 3px
+
+#logo-small
+  width: 45px
+  height: 45px
+  margin: 0
+  padding: 0

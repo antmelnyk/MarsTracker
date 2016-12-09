@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   resources :articles
 
-  get '/pages/*page' => 'pages#show'
+  get '/pages/:page' => 'pages#show', :as => 'static_page'
   get 'registration/' => 'welcome#registration'
   root 'welcome#index'
 
