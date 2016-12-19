@@ -22,3 +22,5 @@ ADD Gemfile.lock /MarsTracker/Gemfile.lock
 RUN bundle install
 
 ADD . /MarsTracker
+
+CMD ["rails", "server", "-b", "0.0.0.0"]
