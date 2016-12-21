@@ -10,8 +10,8 @@ before_install:
   - chmod u+x bin/rails
   - docker-compose --version
   - docker-compose build
-  - sudo docker-compose up
-  - sudo docker ps
-  - psql -c 'create database marstracker_test' -U postgres
+  - docker-compose run -e "RAILS_ENV=test" web rake db:create db:migrate
+  - docker-compose run -e "RAILS_ENV=test" app rake test
+
+script:
   - sudo docker-compose run web bundle exec rake db:test:prepare
-  - bundle exec rspec spec/
