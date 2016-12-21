@@ -1,15 +1,16 @@
-rvm:
-- 2.2.4
+env:
+  DOCKER_COMPOSE_VERSION: 1.12.5
 
-services:
-  - postgresql
+sudo: required
 
-script:
-  - bundle exec rake db:test:prepare
-  - bundle exec rspec spec/
-
-before_script:
+before_install:
+  - sudo rm /usr/local/bin/docker-compose
+  - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
+  - chmod +x docker-compose
+  - sudo mv docker-compose /usr/local/bin
+  - docker-compose --version
+  - docker-compose build
+  - docker ps
   - psql -c 'create database testpg' -U postgres
-
-bundler_args: --binstubs=./bundler_stubs
-
+  - docker-compose run web bundle exec rake db:test:prepare
+  - bundle exec rspec spec/
