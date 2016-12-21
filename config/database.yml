@@ -20,4 +20,4 @@ test:
 
 production:
   <<: *default
-  databse: marstracker_production
+  database: marstracker_production
