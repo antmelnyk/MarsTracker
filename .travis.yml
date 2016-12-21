@@ -3,8 +3,11 @@ env:
 
 sudo: required
 
+services:
+  - docker
+
 before_install:
-  - docker-compose -v
+  - docker-compose --version
   - docker-compose build
   - docker ps
   - psql -c 'create database testpg' -U postgres
