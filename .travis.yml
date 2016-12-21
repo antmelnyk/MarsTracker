@@ -13,8 +13,8 @@ before_install:
   - sudo docker-compose up -d
   - docker ps
   - docker inspect marstracker_db_1
-  - psql -c 'create database marstracker_test;' -U postgres
   - sudo service postgresql restart
+  - psql -c 'create database marstracker_test;' -U postgres
   - docker-compose run web rake db:migrate RAILS_ENV=test
   - docker-compose run -e "RAILS_ENV=test" web bundle exec rspec
 
