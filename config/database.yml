@@ -13,6 +13,7 @@ development: &default
   username: postgres
   password: <%= Rails.application.secrets[:database][:password] %>
   host: db
+  port: 5432
 
 test:
   <<: *default
