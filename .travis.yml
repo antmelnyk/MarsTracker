@@ -14,7 +14,7 @@ before_install:
   - docker ps
   - docker inspect marstracker_db_1
   - psql -c 'create database marstracker_test;' -U postgres
-  - docker-compose run web rake db:migrate
+  - docker-compose run db rake db:migrate
 
 script:
   - docker-compose run -e "RAILS_ENV=test" app rake test
