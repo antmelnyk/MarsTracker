@@ -1,4 +1,5 @@
 <div class="container">
+  <div class="jumbotron">
   <h2>Статьи</h2>
   <p>Информация о колонизации, футуризме и ракетостроении которая может вас заинтересовать</p>
   <%= link_to 'Добавить статью', new_article_path %>
@@ -12,7 +13,8 @@
           <th><%= link_to 'Читать', article_path(article) %></th>
         </tr>
         </thead>
-  <% end %>
+    <% end %>
     </tbody>
   </table>
+  </div>
 </div>

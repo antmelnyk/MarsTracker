@@ -1,17 +1,19 @@
 <div class="container">
-  <h2>Новости</h2>
-  <p>Лента новостей из области космоса, техники, колонизации и футуризма</p>
-  <table class="table table-striped">
-    <tbody>
-    <% @news.each do |news_object| %>
-        <thead>
-        <tr>
-          <th><%= news_object.title %></th>
-          <th><%= Nokogiri::HTML(news_object.text).text %></th>
-          <th><%= link_to 'Читать', news_path(news_object) %></th>
-        </tr>
-        </thead>
-    <% end %>
-    </tbody>
-  </table>
+  <div class="jumbotron">
+    <h2>Новости</h2>
+    <p>Лента новостей из области космоса, техники, колонизации и футуризма</p>
+    <table class="table table-striped">
+      <tbody>
+          <% @news.each do |news_object| %>
+          <thead>
+            <tr>
+              <th><%= news_object.title %></th>
+              <th><%= Nokogiri::HTML(news_object.text).text %></th>
+              <th><%= link_to 'Читать', news_path(news_object) %></th>
+            </tr>
+          </thead>
+          <% end %>
+      </tbody>
+    </table>
+  </div>
 </div>

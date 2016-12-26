@@ -30,6 +30,11 @@ class PagesController < ApplicationController
   end
   helper_method :get_article
 
+  def get_news_object(id)
+    @combined_news = "#{News.find(id).title}<br>#{News.find(id).text}"
+  end
+  helper_method :get_news_object
+
   private
   def valid_page?
     File.exist?(Pathname.new(Rails.root + "app/views/pages/#{params[:page]}.html.erb"))

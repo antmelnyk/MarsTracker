@@ -24,6 +24,7 @@
         <li class="<%= 'active' if params[:page] == 'tracker' %>"><%= link_to 'MARS Tracker', static_page_url('tracker') %></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
+        <li class="<%= 'active' if params[:controller] == 'news' %>"><%= link_to 'Новости', { controller: :news, action: :index }, id: "news-link" %></li>
         <li class="<%= 'active' if params[:controller] == 'articles' %>"><%= link_to 'Cтатьи', { controller: :articles }, id: "articles-link" %></li>
         <li class="<%= 'active' if params[:controller] == 'articles' %>"><%= link_to 'Регистрация', { controller: :welcome, action: :registration }, id: "registration-link" %></li>
       </ul>
