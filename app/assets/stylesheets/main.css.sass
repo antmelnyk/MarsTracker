@@ -1,0 +1,41 @@
+@import "bootstrap-sprockets"
+@import "bootstrap"
+@import "welcome.sass"
+@import "articles.sass"
+@import "tracker.sass"
+
+$bgDefault      : #090a0e
+$bgHighlight    : #1e222f
+$colDefault     : #ffffff
+$colHighlight   : #ffffff
+
+.navbar-default
+  background-color: $bgDefault
+  border-color: $bgHighlight
+  .navbar-brand
+    color: $colDefault
+    margin-right: 10px
+    padding: 3px
+    &:hover, &:focus
+      color: $colHighlight
+  .navbar-text
+    color: $colDefault
+  .navbar-nav
+    > li
+      > a
+        color: $colDefault
+        font-size: 16px
+        font-weight: bold
+        &:hover, &:focus
+          color: $colHighlight
+    > .active
+      > a, > a:hover, > a:focus
+        color: $colHighlight
+        background-color: $bgHighlight
+
+body
+  background: url(image_path('mars-background.PNG')) no-repeat center center fixed
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: 100% auto

@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
 
   resources :articles
+  resources :news
 
   get '/pages/:page' => 'pages#show', :as => 'static_page'
   get 'registration/' => 'welcome#registration'
-  root 'welcome#index'
+  root 'pages#index'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

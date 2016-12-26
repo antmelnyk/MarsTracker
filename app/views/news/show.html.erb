@@ -1,0 +1,14 @@
+<div class="jumbotron">
+  <div class="row">
+    <p>
+      <%= @news_object.title %>
+      <%= @news_object.created_at %>
+    </p>
+  </div>
+  <div class="row">
+      <p>
+        <%= raw @news_object.text %>
+      </p>
+    <%= link_to 'Назад', news_path %>
+  </div>
+</div>

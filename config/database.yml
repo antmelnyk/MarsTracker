@@ -12,7 +12,7 @@ development: &default
   pool: 5
   username: postgres
   password: <%= Rails.application.secrets[:database][:password] %>
-  host: db
+  host: localhost
 
 test:
   <<: *default
