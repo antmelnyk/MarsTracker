@@ -4,34 +4,48 @@
 @import "articles.sass"
 @import "tracker.sass"
 
-$bgDefault      : #090a0e
-$bgHighlight    : #1e222f
-$colDefault     : #ffffff
-$colHighlight   : #ffffff
+$bgDefault      : rgba(9, 10, 14, 0.6)
+$bgHighlight    : rgba(30, 34, 48, 0.6)
+$colDefault     : white
 
 .navbar-default
-  background-color: $bgDefault
-  border-color: $bgHighlight
+  background: rgba(9, 10, 14, 0.5)
+  border: none
   .navbar-brand
     color: $colDefault
     margin-right: 10px
     padding: 3px
-    &:hover, &:focus
-      color: $colHighlight
+
   .navbar-text
     color: $colDefault
+
   .navbar-nav
     > li
       > a
+        transition: 0.5s
         color: $colDefault
         font-size: 16px
         font-weight: bold
         &:hover, &:focus
-          color: $colHighlight
+          background-color: $bgHighlight
+          color: $colDefault
+          transition: 0.5s
+
     > .active
       > a, > a:hover, > a:focus
-        color: $colHighlight
         background-color: $bgHighlight
+        color: $colDefault
+
+.tracker
+  width: 100%
+  font-size: 22px
+  background-color: #090a0e
+  border-color: #090a0e
+  transition: 0.5s
+  &:hover
+    background-color: darkred
+    border-color: darkred
+    transition: 0.5s
 
 body
   background: url(image_path('mars-background.PNG')) no-repeat center center fixed
@@ -39,3 +53,22 @@ body
   -moz-background-size: cover
   -o-background-size: cover
   background-size: 100% auto
+
+.jumbotron
+  background-color: $bgDefault
+  color: white
+
+#main-container
+  margin-top: 55px
+
+.navbar-brand.mars-logo
+  margin: 0
+  padding: 3px
+
+#logo-small
+  width: 45px
+  height: 45px
+  margin: 0
+  padding: 0
+
+
