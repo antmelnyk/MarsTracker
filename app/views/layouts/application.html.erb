@@ -26,7 +26,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li class="<%= 'active' if params[:controller] == 'news' %>"><%= link_to 'Новости', { controller: :news, action: :index }, id: "news-link" %></li>
         <li class="<%= 'active' if params[:controller] == 'articles' %>"><%= link_to 'Cтатьи', { controller: :articles }, id: "articles-link" %></li>
-        <li class="<%= 'active' if params[:controller] == 'articles' %>"><%= link_to 'Регистрация', { controller: :welcome, action: :registration }, id: "registration-link" %></li>
+        <li class="<%= 'active' if params[:controller] == 'users' %>"><%= link_to 'Регистрация', { controller: :users, action: :new }, id: "registration-link" %></li>
       </ul>
     </div>
   </div>
