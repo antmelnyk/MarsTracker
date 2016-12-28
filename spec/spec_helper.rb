@@ -14,6 +14,9 @@ ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
 ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
+  config.before(:suite) do
+    Rails.application.load_seed # loading seeds
+  end
   # ## Mock Framework
   #
   # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:
