@@ -2,9 +2,9 @@ Rails.application.routes.draw do
 
   resources :articles
   resources :news
+  resources :users
 
   get '/pages/:page' => 'pages#show', :as => 'static_page'
-  get 'registration/' => 'welcome#registration'
   root 'pages#index'
 
 

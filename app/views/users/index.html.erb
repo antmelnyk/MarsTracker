@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="jumbotron">
+    <h2>Пользователи</h2>
+    <p>Информация о зарегистрированных пользователях</p>
+    <table class="table table-striped">
+      <tbody>
+      <% @users.each do |user| %>
+          <thead>
+          <tr>
+            <th><%= user.name %></th>
+            <th><%= link_to 'Подробнее', user_path(user) %></th>
+          </tr>
+          </thead>
+      <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

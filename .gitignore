@@ -17,3 +17,6 @@
 /tmp
 /db/database.yml
 /config/secrets.yml
+/config/application
+# Ignore application configuration
+/config/application.yml
