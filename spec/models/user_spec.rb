@@ -22,6 +22,18 @@ subject.password_confirmation = "fobar"
 expect(subject).to_not be_valid
 end
 
+it "creates new user through registration page" do
+visit 'users/new'
+fill_in 'Name', with: 'UserTest'
+fill_in 'Email', with: 'email@domain.com'
+fill_in 'Password', with: 'password'
+fill_in 'Password confirmation', with: 'password'
+expect{
+click_button 'Save User'
+}.to change(User, :count).by(1)
+
+end
+
 
 
 end
