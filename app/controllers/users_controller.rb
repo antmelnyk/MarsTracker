@@ -14,6 +14,7 @@ class UsersController < ApplicationController
   end
 
   def create
+    User.connection_check
     @user = User.new(user_params)
     respond_to do |format|
       if @user.save
