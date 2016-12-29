@@ -6,12 +6,14 @@
 0. Упевніться, що Докер взагалі працює на вашій машині. Наприклад, користувачам Windows необхідний Microsoft Hyper-V для роботи і доступ Докера до ваших жорстких дисків (share local drives).
 1. Завантажте проект з Гіта (через clone або архівом).
 2. Перейдіть в консолі до директорії проекту та виконайте наступні команди:
-* docker-compose build
-* docker-compose up -d
-* docker-compose run web rake db:create
-* docker-compose run web rake db:migrate
-* docker-compose run web rake db:seed
+- docker-compose build
+- docker-compose up -d
+- docker-compose run web rake db:create
+- docker-compose run web rake db:migrate
+- docker-compose run web rake db:seed
 Ви можете знайти розгорнутий апп на localhost:3000
 
-<em>Примітка 1</em>: під час білду Докер може завантажити близько 1.1 Гб даних - Рубі, Рельси, Postgresql, відповідні геми (бібліотеки), локальні linux налаштування, node js і т.д. Це нормально.<br>
-<em>Примітка 2</em>: Тести на Травісі не проходяться через те, що всередині Докера на Травісі Рельси не можуть створити бази даних, тому що невідома IP адреса Докер-хосту. Поки що проблема невирішена. Тести можна запустити локально командою bundle exec rspec, попередньо в config/database.yml виставивши host: localhost
+- Примітка 1: під час білду Докер може завантажити близько 1.1 Гб даних - Рубі, Рельси, Postgresql, відповідні геми (бібліотеки), локальні linux налаштування, node js і т.д. Це нормально.
+- Примітка 2: Тести на Травісі не проходяться через те, що всередині Докера на Травісі Рельси не можуть створити бази даних, тому що невідома IP адреса Докер-хосту. Поки що проблема невирішена. Тести можна запустити локально командою bundle exec rspec, попередньо в config/database.yml виставивши host: localhost
+
+У випадку питань писати командиру команди @pixelgoo у Slack-чаті чи на пошту pixelgoo@gmail.com
